@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Information about Residencia Terracota in Totana, Murcia, Spain" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Andrew Bateman" />
+    <meta name="theme-color" content="#B35642" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon tag -->
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+
+    <!--PWA-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+
+    <!--CSS styles preloaded to avoid chaining of critical files-->
+    <link rel="preload" href="styles.min.css" as="style">
+    <link rel="stylesheet" href="styles.min.css">
+
+    <title>Terracota</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav>
+        <div class="nav__logo">
+          <a href="#home"
+            >
+            <img src="assets/icons/home.svg" width="40" height="40" alt="website icon"/>
+            <!-- <picture>
+              <source
+                type="image/png"
+                width="40px"
+                height="40px"
+                srcset="assets/icons/logo-44.png"
+              /> -->
+              <!-- <source
+                type="image/jpeg"
+                width="40px"
+                height="40px"
+                srcset="assets/icons/logo-44.jpg"
+              />
+              <img
+                src="assets/icons/logo-44.jpg"
+                width="40px"
+                height="40px"
+                alt="logo"
+              /> -->
+            <!-- </picture> -->
+        </a>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li class="link"><a href="#features">Features</a></li>
+          <li class="link"><a href="#photos">Photos</a></li>
+          <li class="link"><a href="#map">Map</a></li>
+          <li class="link"><a href="#info">Info</a></li>
+          <li class="link"><a href="contact">Contact</a></li>
+        </ul>
+        <div class="nav__menu__btn" id="menu-btn">
+          <span
+            ><i
+              ><img
+                width="50"
+                height="50"
+                src="assets/icons/menu-boxed-white.svg"
+                alt="logo menu" /></i
+          ></span>
+        </div>
+      </nav>
+      <div class="section__container header__container" id="home">
+        <!-- <p>test</p> -->
+        <!-- <div class="bottom-right">Bottom Right</div> -->
+      </div>
+    </header>
+
+    <!--features section-->
+    <section class="section__container features__container" id="features">
+      <div class="features__content">
+        <h2 class="section__header">Features & Amenities</h2>
+        <p class="section__subheader features__subheader">
+          This is a beautiful home for your family and friends to enjoy, located
+          in Totana, Murcia, at the foot of the protected 17,804 ha Sierra
+          Espuña mountain range.
+        </p>
+        <div class="features__grid">
+          <div class="features__card">
+            <span><i><img
+              width="30"
+              height="30"
+              src="assets/icons/location-current-white.svg"
+              alt="logo menu" /></i
+        ></i></span>
+            <h3>Location</h3>
+            <p>
+              36mins from Corvera airport, 70mins from Alicante airport, 35mins from the bar & sandy beaches in Bolnuevo.
+            </p>
+          </div>
+          <div class="features__card">
+            <span><i><img
+              width="30"
+              height="30"
+              src="assets/icons/cart-white.svg"
+              alt="logo menu" /></i
+        ></i></span>
+            <h3>Convenience</h3>
+            <p></p>
+          </div>
+          <div class="features__card">
+            <span><i><img
+              width="30"
+              height="30"
+              src="assets/icons/cart-white.svg"
+              alt="logo menu" /></i
+        ></i></span>
+            <h3>24/7 Support</h3>
+            <p>
+              Experience peace of mind knowing that our dedicated team is
+              available round the clock
+            </p>
+          </div>
+          <div class="features__card">
+            <span><i><img
+              width="30"
+              height="30"
+              src="assets/icons/cart-white.svg"
+              alt="logo menu" /></i
+        ></i></span>
+            <h3>Hassle Free Returns</h3>
+            <p>
+              We believe in the perfect match, and if it doesn't quite fit, we
+              make returning items a breeze
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="features__image">
+        <picture>
+          <source
+            type="image/webp"
+            width="600px"
+            height="auto"
+            srcset="assets/images/feature.webp"
+          />
+          <source
+            type="image/jpeg"
+            width="600px"
+            height="auto"
+            srcset="assets/images/feature.jpg"
+          />
+          <img
+            src="assets/images/feature.jpg"
+            width="600px"
+            height="auto"
+            alt="feature"
+          />
+        </picture>
+      </div>
+    </section>
+
+    <!--photos section-->
+    <section class="photos__container" id="photos">
+      <div class="photos__grid__top">
+        <picture>
+          <source
+            type="image/webp"
+            width="400"
+            height="266"
+            srcset="assets/images/offer-1.webp"
+          />
+          <source
+            type="image/jpeg"
+            width="400"
+            height="266"
+            srcset="assets/images/offer-1.jpg"
+          />
+          <img
+            src="assets/images/offer-1.jpg"
+            width="400"
+            height="266"
+            alt="offer-1"
+          />
+        </picture>
+        <picture>
+          <source
+            type="image/webp"
+            width="400"
+            height="266"
+            srcset="assets/images/offer-2.webp"
+          />
+          <source
+            type="image/jpeg"
+            width="400"
+            height="266"
+            srcset="assets/images/offer-2.jpg"
+          />
+          <img
+            src="assets/images/offer-2.jpg"
+            width="400"
+            height="266"
+            alt="offer-2"
+          />
+        </picture>
+        <picture>
+          <source
+            type="image/webp"
+            width="400"
+            height="266"
+            srcset="assets/images/offer-3.webp"
+          />
+          <source
+            type="image/jpeg"
+            width="400"
+            height="266"
+            srcset="assets/images/offer-3.jpg"
+          />
+          <img
+            src="assets/images/offer-3.jpg"
+            width="400"
+            height="266"
+            alt="offer-3"
+          />
+        </picture>
+
+        <div class="photos__content">
+          <h2 class="section__header">Photos</h2>
+          <p class="section__subheader">
+            These are photos of the house and land. Click below to see photos of
+            the surrounding area.
+          </p>
+          <button class="btn">Surrounding Area</button>
+        </div>
+      </div>
+      <div class="photos__grid__bottom">
+        <picture>
+          <source
+            type="image/webp"
+            width="400"
+            height="266"
+            srcset="assets/images/offer-4.webp"
+          />
+          <source
+            type="image/jpeg"
+            width="400"
+            height="266"
+            srcset="assets/images/offer-4.jpg"
+          />
+          <img
+            src="assets/images/offer-4.jpg"
+            width="400"
+            height="266"
+            alt="offer-4"
+          />
+        </picture>
+        <picture>
+          <source
+            type="image/webp"
+            width="400"
+            height="266"
+            srcset="assets/images/offer-5.webp"
+          />
+          <source
+            type="image/jpeg"
+            width="400"
+            height="266"
+            srcset="assets/images/offer-5.jpg"
+          />
+          <img
+            src="assets/images/offer-5.jpg"
+            width="400"
+            height="266"
+            alt="offer-5"
+          />
+        </picture>
+        <picture>
+          <source
+            type="image/webp"
+            width="400"
+            height="266"
+            srcset="assets/images/offer-6.webp"
+          />
+          <source
+            type="image/jpeg"
+            width="400"
+            height="266"
+            srcset="assets/images/offer-6.jpg"
+          />
+          <img
+            src="assets/images/offer-6.jpg"
+            width="400"
+            height="266"
+            alt="offer-6"
+          />
+        </picture>
+        <picture>
+          <source
+            type="image/webp"
+            width="400"
+            height="266"
+            srcset="assets/images/offer-7.webp"
+          />
+          <source
+            type="image/jpeg"
+            width="400"
+            height="266"
+            srcset="assets/images/offer-7.jpg"
+          />
+          <img
+            src="assets/images/offer-7.jpg"
+            width="400"
+            height="266"
+            alt="offer-7"
+          />
+        </picture>
+      </div>
+    </section>
+
+    <!--map section-->
+    <section class="map__container" id="map">
+
+    <!--contact section-->
+    <section class="contact__container" id="contact">
+
+    </section>
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    <!-- <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+    <script defer="true" src="index.min.js"></script>
+  </body>
+  <footer class="footer">
+		Website created by Andrew Bateman&nbsp;| <a href="https://github.com/AndrewJBateman/html-css-terracota" aria-label="Github" target="_blank">Source code</a>
+	</footer>
+</html>
