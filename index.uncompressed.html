@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="Description"
+    content="Residencia Terracota, a beautiful modern house to rent next to the Sierra Espuña mountains in Totana, Murcia, Spain. " />
+  <meta name="keywords" content="murcia holiday home" />
+  <meta name="author" content="Andrew Bateman" />
+  <meta name="theme-color" content="#B35642" />
+  <meta http-equiv="content-language" content="sp">
+
+  <!-- Display without the browser chrome -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+  <!-- Favicon tag -->
+  <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+
+  <!--PWA-->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/pwa/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/pwa/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/pwa/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+
+  <title>casa rural Terracota</title>
+
+  <!-- bootstrap & Font Awesome -->
+  <link rel="stylesheet" href="css/bootstrap-pure.min.css" />
+  <!--CSS styles loaded -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive-style.css" />
+
+  <link rel="canonical" href="https://www.residencialterracota.com/" />
+
+  <!-- Leaflet CSS -->
+  <link rel="preload" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin="">
+  <noscript>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  </noscript>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+  <!-- header -->
+  <header>
+    <nav class="navbar navbar-fixed-top navbar-expand-md navigation-wrap">
+      <div class="container">
+        <a class="navbar-brand" href="#home" alt="brand logo" aria-label="house brand logo">
+          <img src="./assets/icons/44-white-terracota.svg" width="40px" height="40px" alt="house number 44" />
+        </a>
+        <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 512 512">
+            <style>
+              svg {
+                fill: #fcfcfd
+              }
+            </style>
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+          </svg>
+        </button>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Acerca</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#photos">Fotos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#area">Lugar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#location">Location</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- home section -->
+  <section id="home" class="hero_slider">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-pause="true"
+      data-bs-touch="false">
+      <div class="carousel-inner">
+        <!--image 1: house-front-->
+        <div class="carousel-item active">
+          <picture>
+            <source type="image/webp" class="d-block w-100" srcset="./assets/images/bg/webp/house-front.webp"
+              alt="house front view" />
+            <source type="image/jpeg" class="d-block w-100" srcset="./assets/images/bg/jpg/house-front.jpg"
+              alt="house front view" />
+            <img src="./assets/images/bg/jpg/house-front.jpg" class="d-block w-100" alt="house front view" />
+          </picture>
+          <div class="carousel-caption col-md-6 col-10 col-offset-md-6">
+            <h1>Terracota</h1>
+            <p class="bg-image-p-text">
+              Una vivienda moderna, muy bien equipada y muy confortable. En
+              este alojamiento se respira tranquilidad: ¡relájate con toda la
+              familia!
+            </p>
+          </div>
+        </div>
+        <!--image 2: house-lhs-->
+        <div class="carousel-item">
+          <picture>
+            <source type="image/webp" class="d-block w-100" srcset="./assets/images/bg/webp/house-lhs.webp"
+              loading="lazy" />
+            <source type="image/jpeg" class="d-block w-100" srcset="./assets/images/bg/jpg/house-lhs.jpg"
+              loading="lazy" />
+            <img src="./assets/images/bg/jpg/house-lhs.jpg" class="d-block w-100" alt="house front view"
+              loading="lazy" />
+          </picture>
+          <div class="carousel-caption col-md-6 col-10 col-offset-md-6">
+            <h1>Terracota</h1>
+            <p class="bg-image-p-text">
+              Una vivienda moderna, muy bien equipada y muy confortable. En
+              este alojamiento se respira tranquilidad: ¡relájate con toda la
+              familia!
+            </p>
+          </div>
+        </div>
+        <!--image 3: house-rhs-->
+        <div class="carousel-item">
+          <picture>
+            <source type="image/webp" class="d-block w-100" srcset="./assets/images/bg/webp/house-rhs.webp"
+              loading="lazy" />
+            <source type="image/jpeg" class="d-block w-100" srcset="/assets/images/bg/jpg/house-rhs.jpg"
+              loading="lazy" />
+            <img src="./assets/images/bg/jpg/house-rhs.jpg" class="d-block w-100" alt="house front view"
+              loading="lazy" />
+          </picture>
+          <div class="carousel-caption col-md-6 col-10 col-offset-md-6">
+            <h1>Terracota</h1>
+            <p class="bg-image-p-text">
+              Una vivienda moderna, muy bien equipada y muy confortable. En
+              este alojamiento se respira tranquilidad: ¡relájate con toda la
+              familia!
+            </p>
+          </div>
+        </div>
+        <!--image 4: house-rear-->
+        <div class="carousel-item">
+          <picture>
+            <source type="image/webp" class="d-block w-100" srcset="./assets/images/bg/webp/house-rear.webp"
+              loading="lazy" />
+            <source type="image/jpeg" class="d-block w-100" srcset="./assets/images/bg/jpg/house-rear.jpg"
+              loading="lazy" />
+            <img src="./assets/images/bg/jpg/house-rear.jpg" class="d-block w-100" alt="house rear view"
+              loading="lazy" />
+          </picture>
+          <div class="carousel-caption col-md-6 col-10 col-offset-md-6">
+            <h1>Terracota</h1>
+            <p class="bg-image-p-text">
+              Una vivienda moderna, muy bien equipada y muy confortable. En
+              este alojamiento se respira tranquilidad: ¡relájate con toda la
+              familia!
+            </p>
+          </div>
+        </div>
+        <!--image 5: house-living-->
+        <div class="carousel-item">
+          <picture>
+            <source type="image/webp" class="d-block w-100" srcset="./assets/images/bg/webp/house-inside.webp"
+              loading="lazy" />
+            <source type="image/jpeg" class="d-block w-100" srcset="/assets/images/bg/jpg/house-inside.jpg"
+              loading="lazy" />
+            <img src="/assets/images/bg/jpg/house-inside.jpg" class="d-block w-100" alt="house living room view"
+              loading="lazy" />
+          </picture>
+          <div class="carousel-caption col-md-6 col-10 col-offset-md-6">
+            <h1>Terracota</h1>
+            <p>
+              Una vivienda moderna, muy bien equipada y muy confortable. En
+              este alojamiento se respira tranquilidad: ¡relájate con toda la
+              familia!
+            </p>
+          </div>
+        </div>
+        <!--image 6: house-frontal-->
+        <div class="carousel-item">
+          <picture>
+            <source type="image/webp" class="d-block w-100" srcset="./assets/images/bg/webp/house-frontal.webp"
+              loading="lazy" />
+            <source type="image/jpeg" class="d-block w-100" srcset="/assets/images/bg/jpg/house-frontal.jpg"
+              loading="lazy" />
+            <img src="/assets/images/bg/jpg/house-frontal.jpg" class="d-block w-100" alt="house more distant front view"
+              loading="lazy" />
+          </picture>
+          <div class="carousel-caption col-md-6 col-10 col-offset-md-6">
+            <h1>Terracota</h1>
+            <p>
+              Una vivienda moderna, muy bien equipada y muy confortable. En
+              este alojamiento se respira tranquilidad: ¡relájate con toda la
+              familia!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- features section -->
+  <section class="section__container features__container" id="features">
+    <div class="features__content">
+      <h2 class="section__header">Acerca de la casa</h2>
+      <p class="section__subheader features__subheader">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30" fill="#b5cb99">
+          <path
+            d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9c.1-.2 .2-.3 .3-.5z"
+            fill="#B5CB99" />
+        </svg>
+        Un tranquilo lugar a las faldas de Sierra Espuña en Totana (Murcia) con muy fácil acceso. Este simpático lugar
+        está a 2´5 km del centro del pueblo con todas las posibilidades para realizar compras. Tiene preciosas vistas
+        tanto a la sierra como al valle.
+        <!-- This is a beautiful home for your family and friends to enjoy, located
+        in Totana, Murcia, at the foot of the protected 17,804 ha Sierra
+        Espuña mountain range. -->
+      </p>
+      <div class="features__grid">
+        <div class="features__card">
+          <span><i><img width="30" height="30" src="./assets/icons/location-current-white.svg" alt="location logo"
+                loading="lazy" /></i></span>
+          <h3>Location</h3>
+          <p>
+            36mins from Corvera airport, 70mins from Alicante airport, 35mins from the bar & sandy beaches in Bolnuevo.
+          </p>
+        </div>
+        <div class="features__card">
+          <span><i><img width="30" height="30" src="./assets/icons/cart-white.svg" alt="shopping cart logo"
+                loading="lazy" /></i></span>
+          <h3>Convenience</h3>
+          <p>We believe in the perfect match, and if it doesn't quite fit, we
+            make returning items a breeze. </p>
+        </div>
+        <div class="features__card">
+          <span><i><img width="30" height="30" src="./assets/icons/cart-white.svg" alt="logo menu"
+                loading="lazy" /></i></i></span>
+          <h3>24/7 Support</h3>
+          <p>
+            Experience peace of mind knowing that our dedicated team is
+            available round the clock
+          </p>
+        </div>
+        <div class="features__card">
+          <span><i><img width="30" height="30" src="./assets/icons/cart-white.svg" alt="logo menu"
+                loading="lazy" /></i></span>
+          <h3>Hassle Free Returns</h3>
+          <p>
+            We believe in the perfect match, and if it doesn't quite fit, we
+            make returning items a breeze.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="features__image">
+      <picture>
+        <source type="image/webp" width="482px" height="auto" srcset="./assets/images/feature/house-patio.webp"
+          loading="lazy" />
+        <source type="image/jpeg" width="482px" height="auto" srcset="./assets/images/feature/house-patio.jpg"
+          loading="lazy" />
+        <img src="./assets/images/feature/house-patio.jpg" width="482px" height="auto" alt="house-patio"
+          loading="lazy" />
+      </picture>
+
+    </div>
+  </section>
+
+  <!-- photos section -->
+  <section class="section__container photos__container" id="photos">
+    <div class="photos__grid">
+      <div class="photos__content">
+        <h2 class="section__header">Fotos</h2>
+        <!-- <img src="./assets/icons/comment.svg" width="30px" height="30px" alt="comment"/> -->
+        <p class="section__subheader">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30" fill="#b5cb99">
+            <path
+              d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9c.1-.2 .2-.3 .3-.5z"
+              fill="#B5CB99" />
+          </svg>
+          These are photos of the house and land. Click below to see photos of
+          the surrounding area.
+        </p>
+      </div>
+
+      <!--indoors-->
+      <div class="photo__container">
+        <picture>
+          <source type="image/webp" width="400" height="266"
+            srcset="assets/images/photos/webp/indoors/house-bedroom1.webp" loading="lazy" />
+          <source type="image/jpeg" width="400" height="266"
+            srcset="assets/images/photos/jpg/indoors/house-bedroom1.jpg" loading="lazy" />
+          <img src="assets/images/photos/jpg/indoors/house-bedroom1.jpg" width="400" height="266" alt="house bedroom 1"
+            loading="lazy" />
+        </picture>
+        <div class="photo__text">Bedroom 1</div>
+      </div>
+      <div class="photo__container">
+        <picture>
+          <source type="image/webp" width="720" height="480"
+            srcset="assets/images/photos/webp/indoors/house-bedroom2.webp" loading="lazy" />
+          <source type="image/jpeg" width="720" height="480"
+            srcset="assets/images/photos/webp/indoors/house-bedroom2.jpg" loading="lazy" />
+          <img src="assets/images/photos/webp/indoors/house-bedroom2.jpg" width="720" height="480" alt="house bedroom 2"
+            loading="lazy" />
+        </picture>
+        <div class="photo__text">Bedroom 2</div>
+      </div>
+      <div class="photo__container">
+        <picture>
+          <source type="image/webp" width="720" height="480"
+            srcset="assets/images/photos/webp/indoors/house-bedroom3.webp" loading="lazy" />
+          <source type="image/jpeg" width="720" height="480"
+            srcset="assets/images/photos/jpg/indoors/house-bedroom3.jpg" loading="lazy" />
+          <img src="assets/images/photos/jpg/indoors/house-bedroom3.jpg" width="720" height="480" alt="house bedroom 3"
+            loading="lazy" />
+        </picture>
+        <div class="photo__text">Bedroom 3</div>
+      </div>
+      <div class="photo__container">
+        <picture>
+          <source type="image/webp" width="720" height="480"
+            srcset="assets/images/photos/webp/indoors/house-bedroom4-1.webp" loading="lazy" />
+          <source type="image/jpeg" width="720" height="480"
+            srcset="assets/images/photos/jpg/indoors/house-bedroom4-1.jpg" loading="lazy" />
+          <img src="assets/images/photos/jpg/indoors/house-bedroom4-1.jpg" width="720" height="480"
+            alt="house bedroom 4" loading="lazy" />
+        </picture>
+        <div class="photo__text">Bedroom 4</div>
+      </div>
+      <div class="photo__container">
+        <picture>
+          <source type="image/webp" width="720" height="480"
+            srcset="assets/images/photos/webp/indoors/house-bedroom5-1.webp" loading="lazy" />
+          <source type="image/jpeg" width="720" height="480"
+            srcset="assets/images/photos/webp/indoors/house-bedroom5-1.jpg" loading="lazy" />
+          <img src="assets/images/photos/webp/indoors/house-bedroom5-1.jpg" width="720" height="480"
+            alt="house bedroom 5" loading="lazy" />
+        </picture>
+        <div class="photo__text">Bedroom 5</div>
+      </div>
+      <div class="photo__container">
+        <picture>
+          <source type="image/webp" width="720" height="480"
+            srcset="assets/images/photos/webp/indoors/house-bathroom1-1.webp" loading="lazy" />
+          <source type="image/jpeg" width="720" height="480"
+            srcset="assets/images/photos/jpg/indoors/house-bathroom1-1.jpg" loading="lazy" />
+          <img src="assets/images/photos/jpg/indoors/house-bathroom1-1.jpg" width="720" height="480"
+            alt="house bathroom 1" loading="lazy" />
+        </picture>
+        <div class="photo__text">Bathroom 1</div>
+      </div>
+      <div class="photo__container">
+        <picture>
+          <source type="image/webp" width="720" height="480"
+            srcset="assets/images/photos/webp/indoors/house-bathroom2-1.webp" loading="lazy" />
+          <source type="image/jpeg" width="720" height="480"
+            srcset="assets/images/photos/jpg/indoors/house-bathroom2-1.jpg" loading="lazy" />
+          <img src="assets/images/photos/jpg/indoors/house-bathroom2-1.jpg" width="720" height="480"
+            alt="house bathroom 2" loading="lazy" />
+        </picture>
+        <div class="photo__text">Bathroom 2</div>
+      </div>
+
+      <!--outdoors-->
+      <div class="photo__container">
+        <picture>
+          <source type="image/webp" width="720" height="480" srcset="assets/images/photos/webp/outdoors/house-bbq.webp"
+            loading="lazy" />
+          <source type="image/jpeg" width="720" height="480" srcset="assets/images/photos/jpg/outdoors/house-bbq.jpg"
+            loading="lazy" />
+          <img src="assets/images/photos/jpg/outdoors/house-bbq.jpg" width="720" height="480" alt="house rear bbq"
+            loading="lazy" />
+        </picture>
+        <div class="photo__text">Barbeque area</div>
+      </div>
+      <div class="photo__container">
+        <picture>
+          <source type="image/webp" width="720" height="480"
+            srcset="assets/images/photos/webp/indoors/house-basement-1.webp" loading="lazy" />
+          <source type="image/jpeg" width="720" height="480"
+            srcset="assets/images/photos/jpg/indoors/house-basement-1.jpg" loading="lazy" />
+          <img src="assets/images/photos/jpg/indoors/house-basement-1.jpg" width="720" height="480" alt="house basement"
+            loading="lazy" />
+        </picture>
+        <div class="photo__text">Basement</div>
+      </div>
+      <div class="photo__container">
+        <picture>
+          <source type="image/webp" width="720" height="480"
+            srcset="assets/images/photos/webp/indoors/house-basement-2.webp" loading="lazy" />
+          <source type="image/jpeg" width="720" height="480"
+            srcset="assets/images/photos/jpg/indoors/house-basement-2.jpg" loading="lazy" />
+          <img src="assets/images/photos/jpg/indoors/house-basement-2.jpg" width="720" height="480" alt="house basement"
+            loading="lazy" />
+        </picture>
+        <div class="photo__text">Basement</div>
+      </div>
+      <div class="photo__container">
+        <picture>
+          <source type="image/webp" width="720" height="480"
+            srcset="assets/images/photos/webp/indoors/house-basement-3.webp" loading="lazy" />
+          <source type="image/jpeg" width="720" height="480"
+            srcset="assets/images/photos/jpg/indoors/house-basement-3.jpg" loading="lazy" />
+          <img src="assets/images/photos/jpg/indoors/house-basement-3.jpg" width="720" height="480" alt="house basement"
+            loading="lazy" />
+        </picture>
+        <div class="photo__text">Basement Gym Area</div>
+      </div>
+    </div>
+  </section>
+  <!-- area section -->
+
+  <!-- location section -->
+  <section class="section__container location__container" id="location">
+    <div class="location__content">
+      <h2 class="section__header">Location</h2>
+      <p class="section__text">
+        Coordenadas GPS: 37.7964333, -1.5121459 (37°47'47.2"N 1°30'43.7"W)
+      </p>
+      <p class="section__text">
+        Por la autovía A7 altura de Totana, salida número 609 Poligono Industrial, Totana, Aledo. Seguir la carretera en
+        dirección Aledo hasta pasar 5 rotondas. En la 5ª rotonda coger la primera salida a la derecha dirección
+        POLIDEPORTIVO, seguir todo recto pasando el Polideportivo Municipal hasta llegar al canal del trasvase (aunque
+        antes del polideportivo se pierdc la señal de GPS se recupera otra vez mas arriba). Girar a la derecha siguiendo
+        el canal y a unos 310 metros aproximadamente cruza puente 6 y continúe subiendo un poco la cuesta, hasta llegar
+        a la 4ª casa a la izquierda, es la número 44.
+      </p>
+
+    </div>
+    <picture>
+      <div id="map" class="map__container"></div>
+    </picture>
+  </section>
+  <!-- contact section-->
+
+  <footer>
+    <p>Website by Andrew Bateman</p>
+  </footer>
+  <!-- JS Libraries -->
+  <script defer src="js/bootstrap.min.js"></script>
+  <!-- Main js file-->
+  <script async src="js/main.js"></script>
+  <!-- Leaflet JS -->
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- Leaflet Custom JS -->
+  <script defer src="js/leaflet-scripts.min.js"></script>
+</body>
+
+</html>
