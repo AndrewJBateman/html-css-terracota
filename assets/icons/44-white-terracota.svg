@@ -2,6 +2,6 @@
             xmlns="http://www.w3.org/2000/svg">
   <rect x="0" y="0" width="512" height="512" style="fill: #bc3d0f; stroke: #bc3d0f;"
               transform="matrix(1, 0, 0, 1, 7.105427357601002e-15, 0)" />
-  <text style="white-space: pre; fill: #fff; font-family: Arial, sans-serif; font-size: 250px;" x="123.721"
+  <text style="white-space: pre; fill: #ede9d0; font-family: Arial, sans-serif; font-size: 250px;" x="123.721"
               y="357.266" transform="matrix(1, 0, 0, 1, 7.105427357601002e-15, 0)">44</text>
 </svg>
