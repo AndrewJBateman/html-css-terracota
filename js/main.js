@@ -1,7 +1,7 @@
-// active navbar
+// make navbar background solid after scrolling down
 let nav = document.querySelector(".navigation-wrap");
 window.onscroll = function () {
-  if (document.documentElement.scrollTop > 0) {
+  if (document.documentElement.scrollTop > 180) {
     nav.classList.add("scrolled");
   } else {
     nav.classList.remove("scrolled");

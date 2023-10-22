@@ -21,3 +21,5 @@ L.marker(pos)
     styles: ["background-color: white"]
   })
   .addTo(map);
+
+L.DomEvent.on(map.getContainer(), 'focus', L.DomEvent.preventDefault)

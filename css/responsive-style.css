@@ -100,6 +100,16 @@
     grid-column-start: span 4;
     grid-row-start: span 2;
   }
+
+  
+  /* Map Section */
+  .leaflet__map__container {
+    margin: 0 0 1rem;
+  }
+
+  .google__map__container {
+    margin: 0 0 1rem;
+  }
 }
 
 /* Responsive: small screens */
