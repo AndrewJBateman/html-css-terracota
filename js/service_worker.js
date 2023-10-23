@@ -1,7 +1,7 @@
 // register service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service_worker.min.js').catch((registrationError) => {
+    navigator.serviceWorker.register('service_worker.min.js').catch((registrationError) => {
       console.error('ServiceWorker registration failed: ', registrationError)
     })
   })

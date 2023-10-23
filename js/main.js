@@ -18,4 +18,4 @@ navBar.forEach(function (a) {
 });
 
 // Service Worker
-navigator.serviceWorker.register("service_worker.min.js");
+navigator.serviceWorker.register("js/service_worker.min.js");
